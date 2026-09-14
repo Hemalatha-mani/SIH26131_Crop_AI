@@ -1,0 +1,147 @@
+.history-page {
+  min-height: 80vh;
+  padding: 70px 7%;
+  background: #f7fbf6;
+}
+
+.history-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px;
+}
+
+.history-header h1 {
+  font-size: 48px;
+  margin: 15px 0;
+  color: #183b24;
+}
+
+.history-header h1 span {
+  color: #3c9b55;
+}
+
+.history-header p {
+  color: #66756a;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.section-label {
+  color: #3c9b55;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.history-list {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.history-card {
+  background: white;
+  border: 1px solid #e2eee3;
+  border-radius: 18px;
+  padding: 22px 25px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 5px 20px rgba(30, 70, 40, 0.06);
+}
+
+.history-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 14px;
+  background: #edf8ef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+}
+
+.history-info {
+  flex: 1;
+}
+
+.history-info h3 {
+  margin: 0 0 6px;
+  color: #23452c;
+  font-size: 18px;
+}
+
+.history-info p {
+  margin: 0;
+  color: #7b887e;
+  font-size: 14px;
+}
+
+.history-confidence {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.history-confidence strong {
+  color: #32904b;
+  font-size: 19px;
+}
+
+.history-confidence span {
+  color: #89958c;
+  font-size: 12px;
+}
+
+.history-date {
+  color: #6f7d72;
+  font-size: 14px;
+  min-width: 90px;
+  text-align: right;
+}
+
+.empty-history,
+.history-loading {
+  max-width: 600px;
+  margin: 50px auto;
+  background: white;
+  padding: 60px 30px;
+  border-radius: 22px;
+  text-align: center;
+  border: 1px solid #e2eee3;
+}
+
+.empty-icon {
+  font-size: 55px;
+  margin-bottom: 15px;
+}
+
+.empty-history h2 {
+  color: #23452c;
+}
+
+.empty-history p,
+.history-loading {
+  color: #718076;
+}
+
+@media (max-width: 700px) {
+  .history-page {
+    padding: 45px 5%;
+  }
+
+  .history-header h1 {
+    font-size: 36px;
+  }
+
+  .history-card {
+    flex-wrap: wrap;
+  }
+
+  .history-confidence,
+  .history-date {
+    text-align: left;
+  }
+}

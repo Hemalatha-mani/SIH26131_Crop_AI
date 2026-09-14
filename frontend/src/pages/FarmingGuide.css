@@ -1,0 +1,791 @@
+/* =========================================================
+   FARMING GUIDE
+========================================================= */
+
+.farming-page {
+  min-height: 100vh;
+  background: #f5fbf8;
+  color: #0b3028;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.farming-hero {
+  min-height: 650px;
+  padding: 80px 7%;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 70px;
+  background:
+    radial-gradient(circle at 85% 20%, #d9f7e9 0%, transparent 35%),
+    linear-gradient(135deg, #f8fffc 0%, #edf9f4 100%);
+}
+
+
+/* LEFT */
+
+.farming-hero-content {
+  max-width: 620px;
+}
+
+.farming-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 50px;
+  background: #ddf7eb;
+  color: #087c68;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+
+.farming-hero h1 {
+  margin: 25px 0 22px;
+  font-size: clamp(55px, 6vw, 88px);
+  line-height: 0.98;
+  letter-spacing: -4px;
+  font-weight: 850;
+}
+
+
+.farming-hero h1 span {
+  color: #149b78;
+}
+
+
+.farming-hero-content > p {
+  max-width: 580px;
+  font-size: 19px;
+  line-height: 1.8;
+  color: #607a72;
+}
+
+
+/* BUTTONS */
+
+.farming-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+
+.farming-primary-btn,
+.farming-secondary-btn {
+  text-decoration: none;
+  padding: 17px 25px;
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: 750;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  transition: 0.3s ease;
+}
+
+
+.farming-primary-btn {
+  background: #118a70;
+  color: white;
+  box-shadow: 0 15px 30px rgba(17, 138, 112, 0.2);
+}
+
+
+.farming-primary-btn span {
+  font-size: 22px;
+}
+
+
+.farming-primary-btn:hover {
+  transform: translateY(-3px);
+  background: #08775f;
+}
+
+
+.farming-secondary-btn {
+  background: white;
+  color: #087660;
+  border: 1px solid #cde6dc;
+}
+
+
+.farming-secondary-btn:hover {
+  transform: translateY(-3px);
+  border-color: #149b78;
+}
+
+
+/* MINI FEATURES */
+
+.farming-mini-features {
+  display: flex;
+  gap: 30px;
+  margin-top: 42px;
+}
+
+
+.mini-feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.mini-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: white;
+  box-shadow: 0 8px 25px rgba(15, 80, 60, 0.08);
+}
+
+
+.mini-feature strong {
+  display: block;
+  font-size: 13px;
+}
+
+
+.mini-feature span {
+  display: block;
+  margin-top: 3px;
+  font-size: 11px;
+  color: #789089;
+}
+
+
+/* =========================================================
+   RIGHT FARMING IMAGE
+========================================================= */
+
+.farming-hero-image {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.image-glow {
+  position: absolute;
+  width: 430px;
+  height: 430px;
+  background: #ccefe0;
+  filter: blur(80px);
+  opacity: 0.6;
+  border-radius: 50%;
+}
+
+
+.farming-hero-image img {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 650px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 35px;
+  box-shadow:
+    0 35px 80px rgba(8, 70, 54, 0.18);
+  border: 8px solid white;
+}
+
+
+/* IMAGE CARD */
+
+.image-info-card {
+  position: absolute;
+  z-index: 3;
+  left: 25px;
+  bottom: 25px;
+
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  padding: 15px 22px;
+
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+
+  border-radius: 18px;
+  box-shadow: 0 15px 35px rgba(0, 60, 45, 0.15);
+}
+
+
+.info-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #dcf7e9;
+  font-size: 21px;
+}
+
+
+.image-info-card strong {
+  font-size: 14px;
+}
+
+
+.image-info-card p {
+  margin: 4px 0 0;
+  color: #769087;
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   QUICK GUIDE
+========================================================= */
+
+.quick-guide {
+  padding: 100px 7%;
+  background: white;
+}
+
+
+.guide-heading {
+  text-align: center;
+  max-width: 720px;
+  margin: auto;
+}
+
+
+.section-label,
+.guide-heading > span {
+  color: #159b79;
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+
+
+.guide-heading h2 {
+  font-size: 48px;
+  line-height: 1.1;
+  margin: 15px 0;
+  letter-spacing: -2px;
+}
+
+
+.guide-heading h2 strong {
+  color: #149b78;
+}
+
+
+.guide-heading p {
+  color: #71857f;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+
+.guide-cards {
+  margin-top: 55px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+
+.guide-card {
+  padding: 30px;
+  background: #f7fcfa;
+  border: 1px solid #e0eee8;
+  border-radius: 22px;
+  transition: 0.3s ease;
+}
+
+
+.guide-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 20px 45px rgba(10, 80, 60, 0.1);
+}
+
+
+.guide-card-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  font-size: 29px;
+  margin-bottom: 22px;
+}
+
+
+.guide-card-icon.soil {
+  background: #e2f5df;
+}
+
+
+.guide-card-icon.seed {
+  background: #fff5d8;
+}
+
+
+.guide-card-icon.water {
+  background: #dff4ff;
+}
+
+
+.guide-card-icon.fertilizer {
+  background: #eee5ff;
+}
+
+
+.guide-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+
+.guide-card p {
+  color: #71837d;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+
+.guide-card ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 22px;
+}
+
+
+.guide-card li {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #42655b;
+}
+
+
+/* =========================================================
+   CROP CYCLE
+========================================================= */
+
+.crop-cycle-section {
+  padding: 100px 7%;
+  background: #eff9f5;
+}
+
+
+.cycle-text {
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+}
+
+
+.cycle-text h2 {
+  font-size: 48px;
+  line-height: 1.1;
+  margin: 15px 0;
+}
+
+
+.cycle-text h2 span {
+  color: #149b78;
+}
+
+
+.cycle-text p {
+  color: #6d827b;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+
+.crop-cycle {
+  margin-top: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+
+.cycle-item {
+  background: white;
+  width: 220px;
+  padding: 28px 22px;
+  border-radius: 22px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 12px 30px rgba(10, 80, 60, 0.06);
+}
+
+
+.cycle-number {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  color: #a4bcb4;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+
+.cycle-icon {
+  font-size: 42px;
+  margin: 12px 0;
+}
+
+
+.cycle-item h3 {
+  margin: 8px 0;
+}
+
+
+.cycle-item p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #72847e;
+}
+
+
+.cycle-line {
+  height: 2px;
+  width: 35px;
+  background: #a9daca;
+}
+
+
+/* =========================================================
+   FERTILIZER
+========================================================= */
+
+.fertilizer-section {
+  padding: 100px 7%;
+  background: white;
+}
+
+
+.fertilizer-heading {
+  max-width: 600px;
+}
+
+
+.fertilizer-heading h2 {
+  font-size: 48px;
+  line-height: 1.05;
+  margin: 15px 0;
+}
+
+
+.fertilizer-heading h2 span {
+  color: #149b78;
+}
+
+
+.fertilizer-heading p {
+  color: #71847d;
+  line-height: 1.7;
+}
+
+
+.fertilizer-cards {
+  margin-top: 45px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+
+.nutrient-card {
+  padding: 30px;
+  border-radius: 24px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+
+.nutrient-card.nitrogen {
+  background: #eff9df;
+}
+
+
+.nutrient-card.phosphorus {
+  background: #f1edff;
+}
+
+
+.nutrient-card.potassium {
+  background: #fff4d8;
+}
+
+
+.nutrient-symbol {
+  width: 65px;
+  height: 65px;
+  border-radius: 18px;
+  background: white;
+  display: grid;
+  place-items: center;
+  font-size: 27px;
+  font-weight: 850;
+}
+
+
+.nutrient-card h3 {
+  margin: 3px 0 8px;
+}
+
+
+.nutrient-card p {
+  color: #6f817a;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+.nutrient-card span {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #25866d;
+}
+
+
+/* =========================================================
+   SMART TIPS
+========================================================= */
+
+.smart-tips {
+  padding: 100px 7%;
+  background: #07372e;
+  color: white;
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 100px;
+}
+
+
+.tips-title h2 {
+  font-size: 52px;
+  line-height: 1.05;
+  margin-top: 18px;
+}
+
+
+.tips-title h2 span {
+  color: #53c99c;
+}
+
+
+.tips-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+
+.smart-tip {
+  padding: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+  display: flex;
+  gap: 18px;
+}
+
+
+.smart-tip > span {
+  color: #55c99d;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+
+.smart-tip h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+
+.smart-tip p {
+  margin: 0;
+  color: #aac7be;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.farming-cta {
+  margin: 70px 7%;
+  padding: 60px;
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at 80% 20%, #2ab98b 0%, transparent 30%),
+    #0c8b70;
+
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+
+.farming-cta > div:first-child > span {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+
+.farming-cta h2 {
+  font-size: 48px;
+  line-height: 1.05;
+  margin: 18px 0;
+}
+
+
+.farming-cta p {
+  color: #d0f0e5;
+  max-width: 520px;
+  line-height: 1.7;
+}
+
+
+.cta-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 220px;
+}
+
+
+.cta-main,
+.cta-outline {
+  text-decoration: none;
+  padding: 17px 22px;
+  border-radius: 14px;
+  text-align: center;
+  font-weight: 750;
+}
+
+
+.cta-main {
+  background: white;
+  color: #08745e;
+}
+
+
+.cta-outline {
+  color: white;
+  border: 1px solid rgba(255,255,255,0.4);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .farming-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .farming-hero-content {
+    max-width: 800px;
+  }
+
+  .farming-hero-image {
+    min-height: 400px;
+  }
+
+  .guide-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .crop-cycle {
+    flex-wrap: wrap;
+  }
+
+  .cycle-line {
+    display: none;
+  }
+
+  .smart-tips {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+}
+
+
+@media (max-width: 750px) {
+
+  .farming-hero {
+    padding: 55px 5%;
+  }
+
+  .farming-hero h1 {
+    font-size: 55px;
+    letter-spacing: -2px;
+  }
+
+  .farming-mini-features {
+    flex-direction: column;
+  }
+
+  .farming-hero-image img {
+    height: 380px;
+  }
+
+  .guide-cards,
+  .fertilizer-cards,
+  .tips-list {
+    grid-template-columns: 1fr;
+  }
+
+  .guide-heading h2,
+  .cycle-text h2,
+  .fertilizer-heading h2 {
+    font-size: 38px;
+  }
+
+  .crop-cycle {
+    flex-direction: column;
+  }
+
+  .cycle-item {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .farming-cta {
+    margin: 40px 5%;
+    padding: 40px 25px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .farming-cta h2 {
+    font-size: 40px;
+  }
+
+}

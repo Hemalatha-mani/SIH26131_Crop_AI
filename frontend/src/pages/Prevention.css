@@ -1,0 +1,2180 @@
+/* =========================================================
+   CROPCARE AI - PREVENTION PAGE
+========================================================= */
+
+.prevention-page {
+  min-height: 100vh;
+  background: #f7fcf9;
+  color: #093d32;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.prevention-hero {
+  min-height: 690px;
+
+  padding: 70px 7%;
+
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+
+  align-items: center;
+
+  gap: 55px;
+
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(180, 239, 215, 0.55),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #f9fffc 0%,
+      #eaf9f2 100%
+    );
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.prevention-hero-content {
+  max-width: 610px;
+}
+
+.prevention-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 10px 18px;
+
+  border-radius: 50px;
+
+  background: #daf6e9;
+
+  color: #087c65;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.prevention-badge span {
+  font-size: 18px;
+}
+
+.prevention-hero h1 {
+  margin: 27px 0 25px;
+
+  font-size: clamp(58px, 6vw, 88px);
+
+  line-height: 0.98;
+
+  letter-spacing: -4px;
+
+  font-weight: 850;
+
+  color: #073b31;
+}
+
+.prevention-hero h1 span {
+  color: #159d7c;
+}
+
+.prevention-hero-content > p {
+  max-width: 550px;
+
+  font-size: 19px;
+
+  line-height: 1.7;
+
+  color: #5b756e;
+
+  margin-bottom: 30px;
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.prevention-hero-buttons {
+  display: flex;
+
+  gap: 13px;
+
+  flex-wrap: wrap;
+}
+
+.prevention-primary-btn,
+.prevention-secondary-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 15px;
+
+  padding: 16px 23px;
+
+  border-radius: 15px;
+
+  text-decoration: none;
+
+  font-weight: 750;
+
+  transition: 0.25s ease;
+}
+
+.prevention-primary-btn {
+  background: #108b73;
+
+  color: white;
+
+  box-shadow:
+    0 14px 30px rgba(16, 139, 115, 0.2);
+}
+
+.prevention-primary-btn:hover {
+  transform: translateY(-3px);
+
+  background: #087561;
+}
+
+.prevention-secondary-btn {
+  background: white;
+
+  color: #087561;
+
+  border: 1px solid #cce7dc;
+}
+
+.prevention-secondary-btn:hover {
+  transform: translateY(-3px);
+
+  border-color: #108b73;
+}
+
+
+/* =========================================================
+   HERO STATS
+========================================================= */
+
+.prevention-stat-row {
+  display: flex;
+
+  gap: 38px;
+
+  margin-top: 42px;
+}
+
+.prevention-stat-row div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.prevention-stat-row strong {
+  font-size: 27px;
+
+  color: #0b856c;
+}
+
+.prevention-stat-row span {
+  font-size: 12px;
+
+  color: #668079;
+
+  font-weight: 650;
+}
+
+
+/* =========================================================
+   GROWING PLANT VISUAL
+========================================================= */
+
+.prevention-visual {
+  position: relative;
+
+  min-height: 550px;
+
+  overflow: hidden;
+
+  border-radius: 40px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #dff7fb 0%,
+      #effcf7 62%,
+      #d9f0df 100%
+    );
+
+  border: 1px solid #cce9de;
+
+  box-shadow:
+    0 30px 70px rgba(13, 92, 70, 0.13);
+}
+
+
+/* SUN */
+
+.sun {
+  position: absolute;
+
+  width: 82px;
+  height: 82px;
+
+  right: 70px;
+  top: 55px;
+
+  border-radius: 50%;
+
+  background: #ffd34f;
+
+  box-shadow:
+    0 0 0 15px rgba(255, 211, 79, 0.12),
+    0 0 45px rgba(255, 205, 60, 0.35);
+
+  animation: sunPulse 4s ease-in-out infinite;
+}
+
+@keyframes sunPulse {
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+
+/* CLOUDS */
+
+.cloud {
+  position: absolute;
+
+  width: 110px;
+  height: 32px;
+
+  background: rgba(255, 255, 255, 0.8);
+
+  border-radius: 50px;
+
+  filter: blur(1px);
+}
+
+.cloud::before,
+.cloud::after {
+  content: "";
+
+  position: absolute;
+
+  background: white;
+
+  border-radius: 50%;
+}
+
+.cloud::before {
+  width: 45px;
+  height: 45px;
+
+  left: 20px;
+  bottom: 5px;
+}
+
+.cloud::after {
+  width: 55px;
+  height: 55px;
+
+  right: 18px;
+  bottom: 2px;
+}
+
+.cloud-one {
+  top: 120px;
+  left: 70px;
+
+  animation: cloudMove 10s linear infinite;
+}
+
+.cloud-two {
+  top: 190px;
+  right: 120px;
+
+  transform: scale(0.7);
+
+  opacity: 0.7;
+
+  animation: cloudMoveReverse 13s linear infinite;
+}
+
+@keyframes cloudMove {
+  50% {
+    transform: translateX(45px);
+  }
+}
+
+@keyframes cloudMoveReverse {
+  50% {
+    transform: translateX(-35px) scale(0.7);
+  }
+}
+
+
+/* =========================================================
+   VISUAL TITLE
+========================================================= */
+
+.visual-title {
+  position: absolute;
+
+  top: 28px;
+  left: 30px;
+
+  z-index: 5;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 12px 17px;
+
+  border-radius: 50px;
+
+  background: rgba(255, 255, 255, 0.85);
+
+  backdrop-filter: blur(10px);
+
+  color: #176b59;
+
+  font-size: 13px;
+
+  font-weight: 750;
+
+  box-shadow:
+    0 10px 25px rgba(20, 90, 70, 0.08);
+}
+
+
+/* =========================================================
+   PLANT SCENE
+========================================================= */
+
+.plant-scene {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  bottom: 0;
+
+  height: 360px;
+}
+
+
+/* SOIL */
+
+.soil {
+  position: absolute;
+
+  bottom: 0;
+
+  width: 100%;
+
+  height: 105px;
+
+  background:
+    linear-gradient(
+      175deg,
+      #83b65c,
+      #679d4e
+    );
+
+  border-radius: 50% 50% 0 0;
+}
+
+.soil-line {
+  position: absolute;
+
+  width: 130px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  background: rgba(59, 117, 58, 0.25);
+
+  top: 35px;
+  left: 15%;
+}
+
+.line-two {
+  top: 60px;
+  left: 55%;
+}
+
+.line-three {
+  top: 78px;
+  left: 30%;
+}
+
+
+/* =========================================================
+   ANIMATED TOMATO PLANT
+========================================================= */
+
+.animated-plant {
+  position: absolute;
+
+  left: 50%;
+
+  bottom: 62px;
+
+  width: 220px;
+  height: 290px;
+
+  transform: translateX(-50%);
+}
+
+
+/* STEM */
+
+.plant-stem {
+  position: absolute;
+
+  left: 50%;
+
+  bottom: 0;
+
+  width: 14px;
+  height: 245px;
+
+  transform: translateX(-50%);
+
+  border-radius: 20px;
+
+  background: #24864e;
+
+  transform-origin: bottom;
+
+  animation: plantGrow 3s ease-in-out infinite;
+}
+
+@keyframes plantGrow {
+  0%,
+  100% {
+    transform: translateX(-50%) scaleY(0.97);
+  }
+
+  50% {
+    transform: translateX(-50%) scaleY(1.03);
+  }
+}
+
+
+/* LEAVES */
+
+.plant-leaf {
+  position: absolute;
+
+  font-size: 70px;
+
+  filter:
+    drop-shadow(
+      0 8px 5px rgba(15, 80, 40, 0.12)
+    );
+
+  animation: leafMove 3.5s ease-in-out infinite;
+}
+
+.leaf-one {
+  left: 0;
+
+  top: 90px;
+
+  transform: rotate(-18deg);
+}
+
+.leaf-two {
+  right: -5px;
+
+  top: 125px;
+
+  transform: rotate(18deg);
+
+  animation-delay: 0.5s;
+}
+
+@keyframes leafMove {
+  50% {
+    transform: translateY(-7px) rotate(-12deg);
+  }
+}
+
+
+/* FLOWER */
+
+.plant-flower {
+  position: absolute;
+
+  top: 25px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  font-size: 48px;
+
+  animation: flowerBloom 3s ease-in-out infinite;
+}
+
+@keyframes flowerBloom {
+  0%,
+  100% {
+    transform: translateX(-50%) scale(0.92);
+  }
+
+  50% {
+    transform: translateX(-50%) scale(1.08);
+  }
+}
+
+
+/* TOMATOES */
+
+.plant-fruit {
+  position: absolute;
+
+  font-size: 48px;
+
+  animation: tomatoBounce 3s ease-in-out infinite;
+}
+
+.fruit-one {
+  left: 22px;
+  top: 145px;
+}
+
+.fruit-two {
+  right: 20px;
+  top: 175px;
+
+  animation-delay: 0.6s;
+}
+
+@keyframes tomatoBounce {
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+
+/* =========================================================
+   VISUAL MESSAGE
+========================================================= */
+
+.visual-message {
+  position: absolute;
+
+  z-index: 8;
+
+  bottom: 24px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 13px 23px;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  border-radius: 50px;
+
+  white-space: nowrap;
+
+  color: #087762;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  box-shadow:
+    0 12px 30px rgba(20, 90, 70, 0.12);
+}
+
+.visual-message span {
+  width: 25px;
+  height: 25px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: #d9f5e8;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.prevention-section-heading {
+  max-width: 650px;
+
+  margin-bottom: 50px;
+}
+
+.prevention-section-heading > span {
+  color: #119374;
+
+  font-size: 12px;
+
+  font-weight: 850;
+
+  letter-spacing: 2px;
+}
+
+.prevention-section-heading h2 {
+  margin: 15px 0;
+
+  font-size: clamp(40px, 4vw, 58px);
+
+  line-height: 1.05;
+
+  letter-spacing: -2px;
+
+  color: #073d32;
+}
+
+.prevention-section-heading h2 span {
+  color: #159d7c;
+}
+
+.prevention-section-heading p {
+  max-width: 590px;
+
+  color: #678078;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+}
+
+.prevention-section-heading.centered {
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: center;
+}
+
+.prevention-section-heading.centered p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* =========================================================
+   PILLARS
+========================================================= */
+
+.pillars-section {
+  padding: 110px 7%;
+
+  background: #ffffff;
+}
+
+.pillars-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+.pillar-card {
+  position: relative;
+
+  min-height: 260px;
+
+  padding: 30px;
+
+  border-radius: 24px;
+
+  background: #f7fcf9;
+
+  border: 1px solid #e0eee8;
+
+  transition: 0.3s ease;
+
+  animation: cardAppear 0.6s ease both;
+  animation-delay: var(--delay);
+}
+
+@keyframes cardAppear {
+  from {
+    opacity: 0;
+
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+.pillar-card:hover {
+  transform: translateY(-7px);
+
+  background: #effaf5;
+
+  border-color: #bfe4d5;
+
+  box-shadow:
+    0 20px 40px rgba(16, 105, 82, 0.09);
+}
+
+.pillar-number {
+  position: absolute;
+
+  top: 24px;
+  right: 27px;
+
+  color: #b8d7cb;
+
+  font-size: 13px;
+
+  font-weight: 850;
+}
+
+.pillar-icon {
+  width: 58px;
+  height: 58px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 18px;
+
+  background: #ddf7eb;
+
+  font-size: 28px;
+
+  margin-bottom: 23px;
+}
+
+.pillar-card h3 {
+  margin: 0 0 10px;
+
+  font-size: 21px;
+
+  color: #104d40;
+}
+
+.pillar-card p {
+  margin: 0;
+
+  color: #6b837c;
+
+  line-height: 1.65;
+
+  font-size: 14px;
+}
+
+.pillar-arrow {
+  position: absolute;
+
+  bottom: 23px;
+  right: 27px;
+
+  color: #149675;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   DISEASE PREVENTION
+========================================================= */
+
+.disease-prevention-section {
+  padding: 110px 7%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f3fbf7,
+      #e8f7f0
+    );
+}
+
+.disease-prevention-container {
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: 0.7fr 1.3fr;
+
+  gap: 25px;
+}
+
+
+/* DISEASE LIST */
+
+.disease-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 9px;
+}
+
+.disease-option {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 45px 1fr 20px;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 14px 16px;
+
+  border: 1px solid transparent;
+
+  border-radius: 15px;
+
+  background: rgba(255, 255, 255, 0.65);
+
+  color: #41655c;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  transition: 0.25s ease;
+}
+
+.disease-option:hover {
+  background: white;
+
+  border-color: #c8e7da;
+
+  transform: translateX(3px);
+}
+
+.disease-option.selected {
+  background: #ffffff;
+
+  color: #087b63;
+
+  border-color: #9fd7c4;
+
+  box-shadow:
+    0 12px 30px rgba(17, 110, 83, 0.08);
+}
+
+.disease-option-icon {
+  width: 40px;
+  height: 40px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 12px;
+
+  background: #e3f7ed;
+
+  font-size: 21px;
+}
+
+.disease-option-arrow {
+  color: #15a17e;
+}
+
+
+/* SELECTED CARD */
+
+.selected-disease-card {
+  padding: 36px;
+
+  border-radius: 28px;
+
+  background: white;
+
+  border: 1px solid #d8ebe4;
+
+  box-shadow:
+    0 25px 60px rgba(20, 95, 70, 0.09);
+
+  animation: diseaseSlide 0.35s ease;
+}
+
+@keyframes diseaseSlide {
+  from {
+    opacity: 0;
+
+    transform: translateX(12px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateX(0);
+  }
+}
+
+.selected-disease-top {
+  display: flex;
+
+  align-items: center;
+
+  gap: 17px;
+
+  margin-bottom: 30px;
+}
+
+.selected-disease-icon {
+  width: 68px;
+  height: 68px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 20px;
+
+  background: #e2f8ed;
+
+  font-size: 34px;
+}
+
+.selected-disease-top small {
+  color: #149475;
+
+  font-size: 11px;
+
+  font-weight: 850;
+
+  letter-spacing: 1.5px;
+}
+
+.selected-disease-top h3 {
+  margin: 5px 0 0;
+
+  color: #073d32;
+
+  font-size: 27px;
+}
+
+
+/* TIPS */
+
+.prevention-tip-list {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 13px;
+}
+
+.prevention-tip {
+  display: flex;
+
+  gap: 12px;
+
+  padding: 17px;
+
+  border-radius: 17px;
+
+  background: #f6fbf8;
+
+  border: 1px solid #e5f0eb;
+}
+
+.tip-check {
+  flex-shrink: 0;
+
+  width: 27px;
+  height: 27px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: #d9f4e7;
+
+  color: #087b63;
+
+  font-size: 13px;
+
+  font-weight: 900;
+}
+
+.prevention-tip span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #98aea7;
+
+  font-size: 9px;
+
+  font-weight: 850;
+
+  letter-spacing: 1px;
+}
+
+.prevention-tip p {
+  margin: 0;
+
+  color: #4f6b63;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+
+/* REMEDY BUTTON */
+
+.view-remedies-btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-top: 25px;
+
+  padding: 13px 20px;
+
+  border-radius: 12px;
+
+  background: #108b73;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 750;
+
+  transition: 0.25s ease;
+}
+
+.view-remedies-btn:hover {
+  transform: translateY(-2px);
+
+  background: #087662;
+}
+
+
+/* =========================================================
+   CHECKLIST
+========================================================= */
+
+.checklist-section {
+  padding: 110px 7%;
+
+  display: grid;
+
+  grid-template-columns: 0.8fr 1.2fr;
+
+  align-items: center;
+
+  gap: 70px;
+
+  background: white;
+}
+
+.checklist-intro {
+  max-width: 480px;
+}
+
+.checklist-icon {
+  width: 65px;
+  height: 65px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 20px;
+
+  background: #e0f7eb;
+
+  font-size: 30px;
+
+  margin-bottom: 20px;
+}
+
+.checklist-intro > span {
+  color: #139475;
+
+  font-size: 11px;
+
+  font-weight: 850;
+
+  letter-spacing: 2px;
+}
+
+.checklist-intro h2 {
+  margin: 14px 0;
+
+  color: #073d32;
+
+  font-size: 45px;
+
+  line-height: 1.05;
+
+  letter-spacing: -2px;
+}
+
+.checklist-intro p {
+  color: #678079;
+
+  line-height: 1.7;
+}
+
+
+/* CHECKLIST CARD */
+
+.checklist-card {
+  padding: 30px;
+
+  border-radius: 28px;
+
+  background: #f7fcf9;
+
+  border: 1px solid #deeee7;
+
+  box-shadow:
+    0 20px 50px rgba(20, 90, 70, 0.07);
+}
+
+.checklist-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.checklist-header div:first-child {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.checklist-header span {
+  color: #7c928b;
+
+  font-size: 12px;
+}
+
+.checklist-header strong {
+  color: #087b63;
+
+  font-size: 28px;
+}
+
+.progress-circle {
+  width: 58px;
+  height: 58px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: #daf4e8;
+
+  color: #087b63;
+
+  font-size: 12px;
+
+  font-weight: 800;
+}
+
+.checklist-progress {
+  height: 8px;
+
+  margin: 20px 0;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  background: #dfece6;
+}
+
+.checklist-progress div {
+  height: 100%;
+
+  border-radius: inherit;
+
+  background: #18a37f;
+
+  transition: width 0.35s ease;
+}
+
+
+/* CHECK ITEMS */
+
+.checklist-items {
+  display: grid;
+
+  gap: 9px;
+}
+
+.check-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  width: 100%;
+
+  padding: 13px;
+
+  border: 0;
+
+  border-radius: 13px;
+
+  background: white;
+
+  color: #48645b;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  font-size: 13px;
+
+  transition: 0.2s ease;
+}
+
+.check-item:hover {
+  transform: translateX(3px);
+
+  background: #edf9f3;
+}
+
+.check-box {
+  width: 25px;
+  height: 25px;
+
+  flex-shrink: 0;
+
+  display: grid;
+
+  place-items: center;
+
+  border: 2px solid #c5ddd3;
+
+  border-radius: 7px;
+
+  color: white;
+
+  font-size: 13px;
+
+  font-weight: 900;
+}
+
+.check-item.completed .check-box {
+  background: #149778;
+
+  border-color: #149778;
+}
+
+.check-item.completed > span:last-child {
+  color: #139374;
+
+  text-decoration: line-through;
+}
+
+.checklist-complete {
+  margin-top: 18px;
+
+  padding: 14px;
+
+  border-radius: 14px;
+
+  background: #dcf6e9;
+
+  color: #087b63;
+
+  font-weight: 800;
+}
+
+.checklist-complete span {
+  display: block;
+
+  margin-top: 3px;
+
+  font-size: 12px;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   CROPCARE RULE
+========================================================= */
+
+.prevention-rule {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 100px 7%;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 70px;
+
+  background: #073d32;
+
+  color: white;
+}
+
+.rule-decoration {
+  position: absolute;
+
+  right: -30px;
+  top: -70px;
+
+  font-size: 300px;
+
+  opacity: 0.04;
+
+  transform: rotate(-15deg);
+}
+
+.rule-content {
+  position: relative;
+
+  z-index: 2;
+}
+
+.rule-content > span {
+  color: #61d6ad;
+
+  font-size: 11px;
+
+  font-weight: 850;
+
+  letter-spacing: 2px;
+}
+
+.rule-content h2 {
+  margin: 18px 0;
+
+  font-size: 65px;
+
+  line-height: 0.98;
+
+  letter-spacing: -3px;
+}
+
+.rule-content h2 em {
+  color: #48cda1;
+
+  font-style: normal;
+}
+
+.rule-content p {
+  max-width: 540px;
+
+  color: #a8c9bd;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+.rule-points {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  gap: 18px;
+}
+
+.rule-points > div {
+  display: grid;
+
+  grid-template-columns: 50px 1fr;
+
+  column-gap: 15px;
+
+  padding: 20px;
+
+  border-radius: 17px;
+
+  background: rgba(255, 255, 255, 0.055);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.rule-points strong {
+  grid-row: span 2;
+
+  color: #54cfa5;
+
+  font-size: 18px;
+}
+
+.rule-points span {
+  color: white;
+
+  font-weight: 800;
+}
+
+.rule-points p {
+  margin: 5px 0 0;
+
+  color: #99bdb1;
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.prevention-final-cta {
+  margin: 70px 7% 90px;
+
+  padding: 45px 50px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 25px;
+
+  border-radius: 30px;
+
+  background:
+    linear-gradient(
+      110deg,
+      #e3f8ee,
+      #f3fcf8
+    );
+
+  border: 1px solid #cce9dc;
+}
+
+.cta-leaf {
+  width: 75px;
+  height: 75px;
+
+  display: grid;
+
+  place-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 22px;
+
+  background: #c9f0de;
+
+  font-size: 35px;
+}
+
+.prevention-final-cta > div:nth-child(2) {
+  flex: 1;
+}
+
+.prevention-final-cta > div:nth-child(2) > span {
+  color: #118f71;
+
+  font-size: 10px;
+
+  font-weight: 850;
+
+  letter-spacing: 1.7px;
+}
+
+.prevention-final-cta h2 {
+  margin: 8px 0;
+
+  color: #073d32;
+
+  font-size: 34px;
+
+  line-height: 1.1;
+}
+
+.prevention-final-cta p {
+  margin: 0;
+
+  color: #678078;
+
+  font-size: 14px;
+}
+
+.final-check-btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 17px 25px;
+
+  border-radius: 14px;
+
+  background: #108b73;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-weight: 800;
+
+  white-space: nowrap;
+
+  transition: 0.25s ease;
+}
+
+.final-check-btn:hover {
+  transform: translateY(-3px);
+
+  background: #087662;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .prevention-hero {
+    grid-template-columns: 1fr;
+
+    padding: 60px 6%;
+  }
+
+  .prevention-hero-content {
+    max-width: 750px;
+  }
+
+  .prevention-visual {
+    min-height: 520px;
+  }
+
+  .pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .disease-prevention-container {
+    grid-template-columns: 1fr;
+  }
+
+  .checklist-section {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+  .prevention-rule {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .prevention-hero {
+    padding: 45px 5%;
+  }
+
+  .prevention-hero h1 {
+    font-size: 53px;
+
+    letter-spacing: -2px;
+  }
+
+  .prevention-hero-buttons {
+    flex-direction: column;
+  }
+
+  .prevention-primary-btn,
+  .prevention-secondary-btn {
+    width: 100%;
+  }
+
+  .prevention-stat-row {
+    gap: 22px;
+  }
+
+  .prevention-visual {
+    min-height: 430px;
+
+    border-radius: 25px;
+  }
+
+  .pillars-section,
+  .disease-prevention-section,
+  .checklist-section {
+    padding: 75px 5%;
+  }
+
+  .pillars-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .prevention-tip-list {
+    grid-template-columns: 1fr;
+  }
+
+  .selected-disease-card {
+    padding: 23px;
+  }
+
+  .checklist-intro h2 {
+    font-size: 38px;
+  }
+
+  .prevention-rule {
+    padding: 75px 5%;
+  }
+
+  .rule-content h2 {
+    font-size: 48px;
+  }
+
+  .prevention-final-cta {
+    margin: 45px 5% 70px;
+
+    padding: 30px;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .final-check-btn {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+}
+/* =====================================================
+   PREVENTION HERO
+===================================================== */
+
+.prevention-hero {
+  min-height: 680px;
+  padding: 70px 7% 80px;
+
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 50px;
+
+  background:
+    radial-gradient(
+      circle at 85% 35%,
+      rgba(185, 239, 215, 0.55),
+      transparent 40%
+    ),
+    linear-gradient(
+      135deg,
+      #f8fffc 0%,
+      #effbf6 55%,
+      #e7f8f1 100%
+    );
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   LEFT CONTENT
+===================================================== */
+
+.prevention-hero-content {
+  max-width: 600px;
+  position: relative;
+  z-index: 2;
+}
+
+.prevention-badge {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 10px 18px;
+
+  border-radius: 50px;
+
+  background: #dff7ed;
+  color: #087f69;
+
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+
+  margin-bottom: 25px;
+}
+
+.prevention-hero-content h1 {
+  margin: 0;
+
+  font-size: clamp(55px, 5.3vw, 82px);
+  line-height: 0.98;
+
+  font-weight: 850;
+
+  letter-spacing: -3px;
+
+  color: #073d32;
+}
+
+.prevention-hero-content h1 span {
+  color: #149d76;
+}
+
+.prevention-hero-content p {
+  max-width: 540px;
+
+  margin: 30px 0;
+
+  font-size: 20px;
+  line-height: 1.7;
+
+  color: #58736b;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.prevention-buttons {
+  display: flex;
+  gap: 15px;
+
+  flex-wrap: wrap;
+
+  margin-bottom: 38px;
+}
+
+.prevention-primary-btn,
+.prevention-secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+
+  text-decoration: none;
+
+  padding: 17px 25px;
+
+  border-radius: 15px;
+
+  font-size: 16px;
+  font-weight: 750;
+
+  transition: all 0.25s ease;
+}
+
+.prevention-primary-btn {
+  background: #108b75;
+  color: white;
+
+  box-shadow: 0 12px 30px rgba(16, 139, 117, 0.2);
+}
+
+.prevention-primary-btn span {
+  font-size: 22px;
+}
+
+.prevention-primary-btn:hover {
+  transform: translateY(-3px);
+  background: #087b66;
+  box-shadow: 0 16px 35px rgba(16, 139, 117, 0.28);
+}
+
+.prevention-secondary-btn {
+  background: white;
+
+  color: #087b68;
+
+  border: 1px solid #c9e5db;
+}
+
+.prevention-secondary-btn:hover {
+  transform: translateY(-3px);
+
+  background: #f3fcf8;
+
+  border-color: #79c9b0;
+}
+
+
+/* =====================================================
+   FEATURES
+===================================================== */
+
+.prevention-features {
+  display: flex;
+
+  gap: 28px;
+
+  flex-wrap: wrap;
+}
+
+.prevention-feature {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.feature-icon {
+  width: 43px;
+  height: 43px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: white;
+
+  box-shadow: 0 5px 20px rgba(20, 80, 60, 0.08);
+
+  font-size: 21px;
+}
+
+.prevention-feature strong {
+  display: block;
+
+  color: #17483e;
+
+  font-size: 14px;
+}
+
+.prevention-feature span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #789088;
+
+  font-size: 12px;
+}
+
+
+/* =====================================================
+   RIGHT IMAGE AREA
+===================================================== */
+
+.prevention-hero-visual {
+  position: relative;
+
+  min-height: 540px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* soft green background glow */
+
+.sun-glow {
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 225, 110, 0.25) 0%,
+      rgba(170, 239, 203, 0.25) 35%,
+      transparent 70%
+    );
+
+  filter: blur(10px);
+
+  animation: sunlightGlow 4s ease-in-out infinite;
+}
+
+@keyframes sunlightGlow {
+
+  0%,
+  100% {
+    transform: scale(0.95);
+    opacity: 0.7;
+  }
+
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
+
+
+/* =====================================================
+   IMAGE CARD
+===================================================== */
+
+.plant-image-card {
+  position: relative;
+
+  width: 560px;
+  height: 500px;
+
+  border-radius: 35px;
+
+  overflow: visible;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* actual image */
+
+.prevention-plant-image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  border-radius: 30px;
+
+  position: relative;
+
+  z-index: 2;
+
+  filter: drop-shadow(
+    0 25px 30px rgba(20, 90, 65, 0.18)
+  );
+
+  animation: plantFloat 4s ease-in-out infinite;
+}
+
+
+@keyframes plantFloat {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+
+/* =====================================================
+   FLOATING CARDS
+===================================================== */
+
+.floating-card {
+  position: absolute;
+
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 14px 18px;
+
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  border: 1px solid rgba(180, 220, 207, 0.7);
+
+  box-shadow:
+    0 15px 35px rgba(19, 80, 60, 0.14);
+
+  backdrop-filter: blur(12px);
+
+  animation: cardFloat 4s ease-in-out infinite;
+}
+
+.floating-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #e5f8ef;
+
+  border-radius: 12px;
+
+  font-size: 21px;
+}
+
+.floating-card strong {
+  display: block;
+
+  color: #104b3e;
+
+  font-size: 14px;
+}
+
+.floating-card small {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #789088;
+
+  font-size: 11px;
+}
+
+.floating-top {
+  top: 65px;
+  right: -15px;
+}
+
+.floating-bottom {
+  bottom: 60px;
+  left: -25px;
+
+  animation-delay: 1.2s;
+}
+
+@keyframes cardFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1100px) {
+
+  .prevention-hero {
+    grid-template-columns: 1fr;
+
+    padding-top: 60px;
+  }
+
+  .prevention-hero-content {
+    max-width: 750px;
+  }
+
+  .prevention-hero-visual {
+    min-height: 500px;
+  }
+
+  .plant-image-card {
+    width: min(600px, 90vw);
+  }
+
+}
+
+
+@media (max-width: 650px) {
+
+  .prevention-hero {
+    padding: 45px 6%;
+  }
+
+  .prevention-hero-content h1 {
+    font-size: 48px;
+
+    letter-spacing: -2px;
+  }
+
+  .prevention-hero-content p {
+    font-size: 17px;
+  }
+
+  .prevention-features {
+    gap: 15px;
+  }
+
+  .prevention-hero-visual {
+    min-height: 400px;
+  }
+
+  .plant-image-card {
+    width: 100%;
+    height: 380px;
+  }
+
+  .floating-top {
+    right: 0;
+    top: 20px;
+  }
+
+  .floating-bottom {
+    left: 0;
+    bottom: 20px;
+  }
+
+}
