@@ -13,7 +13,7 @@ function ChatHistory() {
   const fetchChatHistory = async () => {
     try {
       const response = await axios.get(
-        "${import.meta.env.VITE_API_URL}/chat-history"
+        `${import.meta.env.VITE_API_URL}/chat-history`
       );
 
       setHistory(response.data);
