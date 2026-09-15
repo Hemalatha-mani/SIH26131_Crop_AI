@@ -131,7 +131,7 @@ function AIDetect() {
 
     try {
       const response = await axios.post(
-        "`${import.meta.env.VITE_API_URL}/predict",
+        `${import.meta.env.VITE_API_URL}/predict`,
         formData,
         {
           headers: {
