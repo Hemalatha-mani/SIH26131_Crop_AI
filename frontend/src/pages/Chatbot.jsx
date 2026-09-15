@@ -32,7 +32,7 @@ function Chatbot() {
 
     try {
       const response = await axios.post(
-        "http://localhost:8000/chat",
+        "${import.meta.env.VITE_API_URL}/chat",
         {
           question: userQuestion
         }
