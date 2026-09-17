@@ -13,7 +13,7 @@ function ChatHistory() {
   const fetchChatHistory = async () => {
     try {
       const response = await axios.get(
-        `${import.meta.env.VITE_API_URL}/chat-history`
+        "https://sih26131-crop-ai-1.onrender.com/chat-history"
       );
 
       setHistory(response.data);
