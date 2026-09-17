@@ -12,7 +12,7 @@ function History() {
 
   const fetchHistory = async () => {
     try {
-      const response = await axios.get(`${import.meta.env.VITE_API_URL}/history`);
+      const response = await axios.get("https://sih26131-crop-ai-1.onrender.com/history");
       setHistory(response.data);
     } catch (error) {
       console.error("Error fetching history:", error);
