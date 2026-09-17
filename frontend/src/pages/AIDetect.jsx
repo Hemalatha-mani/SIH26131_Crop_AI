@@ -131,7 +131,7 @@ function AIDetect() {
 
     try {
       const response = await axios.post(
-        `${import.meta.env.VITE_API_URL}/predict`,
+        "https://sih26131-crop-ai-1.onrender.com/predict",
         formData,
         {
           headers: {
