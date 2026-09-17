@@ -32,7 +32,7 @@ function Chatbot() {
 
     try {
       const response = await axios.post(
-        `${import.meta.env.VITE_API_URL}/chat`,
+        "https://sih26131-crop-ai-1.onrender.com/chat",
         {
           question: userQuestion
         }
