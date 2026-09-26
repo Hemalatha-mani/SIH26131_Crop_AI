@@ -45,18 +45,16 @@ CLASS_NAMES = [
 # LOAD MODEL
 # ============================================================
 
-print("Loading crop disease model...")
+print("Checking crop disease model...")
 
 if not os.path.exists(MODEL_PATH):
     raise FileNotFoundError(
         f"Model not found: {MODEL_PATH}"
     )
 
-model = tf.keras.models.load_model(MODEL_PATH)
+model = None
 
-print("Model loaded successfully!")
-print("Input shape:", model.input_shape)
-print("Output shape:", model.output_shape)
+print("Model file found.")
 
 
 # ============================================================
@@ -124,6 +122,21 @@ def health():
 # ============================================================
 
 def predict_image(image):
+
+    global model
+
+    # Load model only when prediction is requested
+    if model is None:
+        print("Loading crop disease model for prediction...")
+
+        model = tf.keras.models.load_model(
+            MODEL_PATH,
+            compile=False
+        )
+
+        print("Model loaded successfully!")
+        print("Input shape:", model.input_shape)
+        print("Output shape:", model.output_shape)
 
     # Convert image to RGB
     image = image.convert("RGB")
