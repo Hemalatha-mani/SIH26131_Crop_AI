@@ -5,5 +5,5 @@ numpy
 tensorflow==2.21.0
 pillow
 sqlalchemy
-psycopg2-binary
+psycopg[binary]
 pydantic
