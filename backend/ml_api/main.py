@@ -1,8 +1,17 @@
 import io
 import os
 
+
+# Limit TensorFlow CPU usage on Render
+os.environ["TF_NUM_INTRAOP_THREADS"] = "1"
+os.environ["TF_NUM_INTEROP_THREADS"] = "1"
+
 import numpy as np
 import tensorflow as tf
+
+tf.config.threading.set_intra_op_parallelism_threads(1)
+tf.config.threading.set_inter_op_parallelism_threads(1)
+
 from PIL import Image
 from fastapi import FastAPI, File, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
@@ -153,28 +162,46 @@ def predict_image(image):
 # ============================================================
 
 @app.post("/predict")
-async def predict(file: UploadFile = File(...),
-                  db: Session = Depends(get_db)):
+async def predict(
+    file: UploadFile = File(...),
+    db: Session = Depends(get_db)
+):
 
     try:
+        print("STEP 1: Prediction request received")
+        print("Filename:", file.filename)
 
         # Read uploaded image
         image_data = await file.read()
+
+        print("STEP 2: Image read successfully")
+        print("Image size:", len(image_data), "bytes")
 
         # Open image
         image = Image.open(
             io.BytesIO(image_data)
         )
 
+        print("STEP 3: Image opened successfully")
+        print("Image format:", image.format)
+        print("Image size:", image.size)
+
         # Predict
-                # Predict
+        print("STEP 4: Starting model prediction")
+
         disease, confidence = predict_image(image)
+
+        print("STEP 5: Model prediction completed")
+        print("Disease:", disease)
+        print("Confidence:", confidence)
 
         # Convert confidence to percentage
         confidence_percentage = round(
             confidence * 100,
             2
         )
+
+        print("STEP 6: Saving prediction to database")
 
         # Save prediction to PostgreSQL
         prediction_record = Prediction(
@@ -188,13 +215,18 @@ async def predict(file: UploadFile = File(...),
         db.commit()
         db.refresh(prediction_record)
 
+        print("STEP 7: Database save completed")
+
         return {
             "success": True,
             "filename": file.filename,
             "disease": disease,
             "confidence": confidence_percentage
         }
+
     except Exception as e:
+
+        print("PREDICTION ERROR:", str(e))
 
         return {
             "success": False,
