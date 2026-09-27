@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import axios from "axios";
+//import axios from "axios";
+import api from "../api.js";
 import "./Chatbot.css";
 
 function Chatbot() {
@@ -31,12 +32,12 @@ function Chatbot() {
     setLoading(true);
 
     try {
-      const response = await axios.post(
-        "https://sih26131-crop-ai-1.onrender.com/chat",
-        {
-          question: userQuestion
-        }
-      );
+      const response = await api.post(
+  "/chat",
+  {
+    question: userQuestion
+  }
+);
 
       setMessages((prev) => [
         ...prev,
