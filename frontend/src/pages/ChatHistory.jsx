@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+//import axios from "axios";
+import api from "../api.js";
 import "./ChatHistory.css";
 
 function ChatHistory() {
@@ -12,9 +13,7 @@ function ChatHistory() {
 
   const fetchChatHistory = async () => {
     try {
-      const response = await axios.get(
-        "https://sih26131-crop-ai-1.onrender.com/chat-history"
-      );
+      const response = await api.get("/chat-history");
 
       setHistory(response.data);
     } catch (error) {
