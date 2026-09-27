@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./AIDetect.css";
+import api from '../api.js';
+
 
 const diseaseInfo = {
   Healthy: {
@@ -130,15 +132,15 @@ function AIDetect() {
     formData.append("file", selectedFile);
 
     try {
-      const response = await axios.post(
-        "https://sih26131-crop-ai-1.onrender.com/predict",
-        formData,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        }
-      );
+      const response = await api.post(
+  "/predict",
+  formData,
+  {
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
+  }
+);
 
       if (response.data.success) {
         setResult(response.data);
@@ -148,7 +150,7 @@ function AIDetect() {
     } catch (err) {
       console.error(err);
       setError(
-        "Unable to connect to the AI server. Make sure FastAPI is running on port 8000."
+        "Unable to connect to the AI server. Please check your connection and try again."
       );
     } finally {
       setLoading(false);
